@@ -1,0 +1,19 @@
+{
+  "name": "pruebagit",
+  "version": "1.0.0",
+  "description": "Acceso mediante API",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhoannBustamante/pruebaGit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JhoannBustamante/pruebaGit/issues"
+  },
+  "homepage": "https://github.com/JhoannBustamante/pruebaGit#readme"
+}
