@@ -1,15 +1,13 @@
-const api = axios.create({
-  baseURL: "https://api.themoviedb.org/3/",
-  headers: {
-    "Content-Type": "application/json;charset=utf-8",
-  },
-  params: {
-    api_key: API_KEY,
-  },
-});
-
 async function getTrendingMoviesPreview() {
-  const { data } = await api("trending/person/day");
+  const response = await fetch(
+    `https://api.themoviedb.org/3/trending/person/day?api_key=${API_KEY}`,
+    {
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+    }
+  );
+  const data = await response.json();
   const movies = data.results;
 
   movies.forEach((movie) => {
@@ -34,7 +32,15 @@ async function getTrendingMoviesPreview() {
 }
 
 async function getCategegoriesPreview() {
-  const { data } = await api("genre/tv/list");
+  const response = await fetch(
+    `https://api.themoviedb.org/3/genre/tv/list?api_key=${API_KEY}`,
+    {
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+    }
+  );
+  const data = await response.json();
   const categories = data.genres;
 
   categories.forEach((category) => {
